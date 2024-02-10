@@ -1,8 +1,5 @@
 <?php
-
-
 use GuzzleHttp\Client;
-
 class RequestService
 {
     private $client;

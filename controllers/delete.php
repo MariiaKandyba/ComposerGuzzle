@@ -1,7 +1,7 @@
 <?php
-require_once "../../shared/services/requestService.php";
-require_once "../../shared/models/Product.php";
-require '../../vendor/autoload.php';
+require_once "../services/requestService.php";
+require_once "../models/Product.php";
+require '../vendor/autoload.php';
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;
 if ($id != null) {
@@ -11,7 +11,7 @@ if ($id != null) {
     if ($product != null) {
         $id = $product["id"];
         $response = $requestService->deleteEntity($id);
-        header("Location: ../products.php");
+        header("Location: ../index.php");
         exit;
     }
 }

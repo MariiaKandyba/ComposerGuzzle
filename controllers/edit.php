@@ -1,6 +1,6 @@
 <?php
-require_once "../../shared/services/requestService.php";
-require '../../vendor/autoload.php';
+require_once "../services/requestService.php";
+require '../vendor/autoload.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $requestService = new RequestService("http://api/products");
@@ -16,6 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $response = $requestService->updateEntity($id, $entityData);
     $response = json_decode($response);
     $id = $response->product[0]->id;
-    header("Location: ../products.php?id=" . $id);
+    header("Location: ../index.php?id=" . $id);
     exit;
 }

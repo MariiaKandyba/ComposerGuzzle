@@ -18,7 +18,7 @@ if ($id === null) {
         $productObj = new Product($product['title'], $product['price'], $product['id']);
         $productObj->getCardUi();
     } else {
-        header("Location: /productPart/views/notFound.php");
+        header("Location: /views/notFound.php");
         exit;
     }
 }
