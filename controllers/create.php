@@ -17,6 +17,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $response = $requestService->createEntity($entityData);
     $response = json_decode($response);
     $id = $response->product[0]->title;
-    header("Location: ../index.php?id=" . $id);
+    // header("Location: ../index.php?id=" . $id);
     exit;
 }
